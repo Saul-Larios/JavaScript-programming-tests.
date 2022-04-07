@@ -11,10 +11,12 @@ const multiply = (a, b) => {
 
 const a = multiply(50,50)
 console.log(a)
+
 //Mostar el numero mas grande del arreglo// 
 const getBiggest = (arr) => arr.reduce((acc, el) => acc > el ? acc : el)
 const b = getBiggest([50, -1500 ,1000 ,0 ,1 , 54])
 console.log(b)
+
 //Un arrreglo que elimine los undefined, null, fals o 0//
 const clean = (arr) => arr.reduce((acc, el) =>{
     if (el) {
@@ -25,11 +27,13 @@ const clean = (arr) => arr.reduce((acc, el) =>{
 
 const c = clean([1, undefined, null, 0, 2, 3])
 console.log(c)
+
 // Aplanar un arreglo que nos regrese [1, 2, [3, 4], 1, []]//
 const arr = [[1, 2], [[3,4]],[1, []]]
 const flatten =arr=> arr.reduce((acc, el) => acc.concat(el),[])
 const d= flatten(arr)
 console.log(d)
+
 // Funcion que cuente cuantas veces se repite una palabra//
 function repeated(str) {
     const lowered = str.toLowerCase()
@@ -47,6 +51,7 @@ function repeated(str) {
 
 const e = repeated('this is a repeated word test this is a a')
 console.log(e)
+
 // Verificar si una uncion es un palindromo//
 function isPalindrome(str) {
     str = str.replace(/\s/g, '')
